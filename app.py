@@ -1,0 +1,1 @@
+print('from inside my first Docker image')
