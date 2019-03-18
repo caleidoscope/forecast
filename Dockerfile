@@ -1,7 +1,5 @@
-FROM python:3
-
-ADD app.py /
-
-#RUN pip install pystrich
-
-CMD [ "python", "./app.py" ]
+FROM python:alpine3.7
+COPY . /src
+WORKDIR /src
+RUN pip install -r requirements.txt
+CMD python ./app.py
